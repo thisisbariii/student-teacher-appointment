@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Teacher</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="./resources/Logo.png" alt="logo">
+        <nav>
+            <ul class="nav_bar">
+                <li><u><a href="./index.html">Home</a></u></li>
+                <li><u><a href="/admin.html" id="adminlink">Admin</a></u></li>
+                <li><u><a href="/teacher.html">Teacher</a></u></li>
+                <li><u><a href="/student.html">Student</a></u></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="teacher-body">
+        <div class="left-body">
+            <div class="schedule-appo">
+                <h3 id="form-head"> <u> Schedule Appointment </u></h3>
+                <form class="schedule-form" id="form1">
+                    <label for="name">Name</label><input type="text" name="name">
+                    <label for="date">Date</label><input type="date" autocomplete="off" id="date">
+                    <label for="time">Time</label><input type="time" autocomplete="off" id="time">
+                    <input type="submit" value="Submit" id="submitBtn" id="teacher-appo-submit">
+                </form>
+            </div>
+        </div>
+        <div class="right-body">
+            
+            <div class="manage-appo">
+                <h3><u> Appointment Requests </u></h3>
+            </div>
+            <div class="view-message">
+                <h3><u> Messages </u></h3>
+            </div>
+            <div class="view-appo">
+                <h3><u>All Appontments </u></h3>
+                <div id="result"></div>
+            </div>
+        </div>
+    </div>
+    <div><button id="logoutBtn">Logout</button></div>
+    <script src="app.js"></script>
+</body>
+</html>

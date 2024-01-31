@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;800&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(38, 150, 178);
+}
+
+/* index */
+.index-body {
+    background-image: url(./resources/index\ background.png);
+    background-size:initial;
+    background-repeat: no-repeat;
+    background-position:top;
+    background-position-y:10rem;
+}
+
+.index-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.index-text{
+    font-family: "PT Mono";
+    padding-top: 20px;
+    padding-left: 300px;
+    font-size: 30px;
+    color:white;
+}
+/* header */
+
+li, a {
+    font-family: 'Roboto Slab', serif;
+    color: rgb(18, 224, 70);
+    font-weight: 500;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 30px 10%;
+    background: linear-gradient(rgb(201, 213, 21), rgb(16, 48, 117));
+    height: 80px;
+}
+
+.logo {
+    height: 50px;
+    margin-left: 50px;
+}
+
+
+.nav_bar {
+    list-style: none;
+
+}
+.nav_bar li {
+    display: inline-block;
+    padding: 0px 30px;
+}
+.nav_bar li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav_bar li a:hover {
+    color: rgb(203, 231, 17);
+}
+.nav_bar a:is(:link, :active, :visited).active {
+    color:rgb(203, 231, 17);
+}
+
+/* admin page */
+
+.admin-body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Raleway";
+    text-decoration: none;
+    color: rgb(235, 235, 235);
+    margin: 20px;
+    align-items: center;
+}
+
+#form-head {
+    color: white;
+    margin: 0.5rem 300px;
+    font-family: "Raleway";
+    text-decoration: none;
+    font-size: x-large;
+}
+input {
+    background-color: rgb(138, 224, 1);
+}
+input[type="text"] {
+    color: black;
+    }
+.add-teacher {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    max-width: 500px;
+    margin: 0.5rem auto;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.add-teacher label {
+    display: block; 
+    padding: 1px;
+}
+.add-teacher input {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    font-family: "Raleway";
+    font-weight: 800;
+    border-radius: 5px;
+    
+}
+
+#submitBtn {
+    border: solid grey;
+    background: rgb(55, 124, 194);
+    padding: 1rem;
+    color: white;
+    margin: 1rem 0;
+    width : 50%;
+    height: auto;
+    font-family: "Raleway";
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s background ease;
+}
+#submitBtn:hover {
+    background-color: rgb(15, 51, 112);
+}
+
+#update-teacher {
+    margin: 20px;
+    display: block;
+    width: auto;
+    height: auto;
+}
+#update-teacher button {
+    border: solid grey;
+    background: rgb(22, 88, 155);
+    color: white;
+    height: 50px;
+    width: 300px;
+    font-family: "Raleway";
+    cursor: pointer;
+    transition: 0.3s background ease;
+}
+#update-teacher button:hover {
+    background-color: rgb(15, 51, 112);
+}
+
+#approve {
+    margin: 20px;
+    display: block;
+    width: auto;
+    height: auto;
+}
+
+#approve button {
+    border: solid grey;
+    background: rgb(22, 88, 155);
+    color: white;
+    height: 50px;
+    width: 300px;
+    font-family: "Raleway";
+    cursor: pointer;
+    transition: 0.3s background ease;
+}
+
+#approve button:hover {
+    background-color: rgb(15, 51, 112);
+}
+
+
+  /* teacher body */
+.teacher-body {
+    display: flex;
+    flex-direction: row;
+}
+
+.left-body , .right-body{
+    display: flex;
+    flex-direction: column;
+    font-family: "Raleway";
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+    align-items: center;
+}
+
+.schedule-form {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    color: white;
+    max-width: 400px;
+    height: 45vh;
+    margin: 0.5rem auto;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.schedule-form label {
+    display: block; 
+    padding: 1px;
+}
+
+.schedule-form input {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    font-family: "Raleway";
+    font-weight: 800;
+    border-radius: 5px;
+}
+
+.manage-appo {
+    color:black;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    max-width: 500px;
+    width: 500px;
+    height: 160px;
+    margin: 0.5rem auto;
+    padding: 2rem;
+}
+
+.view-message {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    max-width: 500px;
+    height: 160px;
+    width: 500px;
+    margin: 0.5rem auto;
+    padding: 2rem;
+}
+
+.view-appo {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    max-width: 500px;
+    width: 500px;
+    height: 160px;
+    margin: 0.5rem auto;
+    padding: 2rem;
+}
+
+#logoutBtn {
+    border: solid grey;
+    border-radius: 10px;
+    background: rgb(22, 88, 155);
+    padding: 1rem;
+    color: white;
+    margin: 1rem 0;
+    margin-left: 15%;
+    height: auto;
+    font-family: "Raleway";
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s background ease;
+}
+
+#logoutBtn:hover {
+    background-color: rgb(15, 51, 112);
+}
+
+
+
+/* student-page */
+
+.student-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.sturight-body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Raleway";
+    text-decoration: none;
+    color: white;
+    margin-top: 20px;
+    padding-left: 100px;
+}
+
+.stuleft-body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Raleway";
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+    padding-top: 200px;
+    align-items: center;
+}
+#studentreg {
+    border: solid grey;
+    border-radius: 10px;
+    background: rgb(22, 88, 155);
+    padding: 1rem;
+    color: white;
+    margin: 1rem 0;
+    margin-left: 90%;
+    height: auto;
+    font-family: "Raleway";
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s background ease;
+}
+
+#studentreg:hover {
+    background-color: rgb(15, 51, 112);
+}
+
+.student-reg {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    color: white;
+    max-width: 500px;
+    height: 600px;
+    margin: 0.5rem auto;
+    padding: 2rem;
+    font-family: "Raleway";
+}
+
+.student-reg label {
+    display: block; 
+    padding: 20px;
+}
+.student-reg input {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    font-family: "Raleway";
+    font-weight: 800;
+    border-radius: 5px;
+}
+
+.bookappo-form {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    max-width: 500px;
+    margin: 0.5rem auto;
+    padding: 1rem;
+}
+
+.bookappo-form label {
+    display: block; 
+    padding: 1px;
+}
+.bookappo-form input {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    font-family: "Raleway";
+    font-weight: 800;
+    border-radius: 5px;
+}
+
+.send-message {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    max-width: 500px;
+    width: 500px;
+    height: 170px;
+    margin: 0.5rem auto;
+    padding: 1rem;
+}
+.send-message label {
+    display: block; 
+    padding: 1px;
+}
+
+.send-message input {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    font-family: "Raleway";
+    font-weight: 800;
+    border-radius: 5px;
+}
+
+#stu-form-head {
+    
+    margin: 0.5rem 450px;
+    font-family: "Raleway";
+    text-decoration: none;
+    font-size: x-large;
+}
+
+#registerBtn {
+    border: 0;
+    background: rgb(1, 56, 112);
+    padding: 1rem;
+    color: white;
+    margin: 10rem 0;
+    width : 100%;
+    height: auto;
+    font-family: "Raleway";
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s background ease;
+}
+#registerBtn:hover {
+    background-color: black;
+}
+
+
+/* admin login */
+#login-form {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    max-width: 500px;
+    margin: 0.5rem auto;
+    padding: 3rem;
+}
+
+#login-form  label {
+    display: block; 
+    padding: 1px;
+}
+#login-form  input {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    font-family: "Raleway";
+    font-weight: 800;
+    border-radius: 5px;
+    
+}
+

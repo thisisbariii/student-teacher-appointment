@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Login Form</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js">
+  </script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="main">
+    <form id="Loginfrm" action="teacher_page.html">
+      <div class="wrapper">
+        <h1 class="title my-2">Login</h1>
+
+        <div>
+
+          <input type="text" class="username" id="username" placeholder="Enter Username" name="user name"
+            title="Please Enter Right Username" required>
+        </div>
+        <div>
+          <input type="password" name="" placeholder="Password" id="password">
+        </div>
+        <div class="form-check form-switch toggle_log">
+          <input class="form-check-input " type="checkbox" role="switch" id="flexSwitchCheckDefault">
+          <label class="form-check-label keepedl " for="flexSwitchCheckDefault">Kepped Me Logged In...!</label>
+        </div>
+
+        <button id="signupinp" type="submit">Sign In</button>
+        <div class="member">
+          Not A Memeber?<a href="register.html">Signup Here!</a>
+        </div>
+    </form>
+  </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js">
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase-app.js">
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase-auth.js">
+  </script>
+
+  <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase-database.js"> </script>
+
+
+  <script src="login.js"></script>
+</body>
+
+</html>

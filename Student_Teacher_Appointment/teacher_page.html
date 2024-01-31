@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="teacher.css" />
+
+  <title>Teacher Panel</title>
+    <script src=
+  "https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js">
+    </script>
+  <script src=
+  "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+   
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
+    
+
+</head>
+
+<body>
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
+      </li>
+      
+       <li class="nav-item dropdown">
+        <div class="dropdown">
+      <a class="nav-link  dropdown-toggle"  style="cursor:pointer;" herf="" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        Appointment
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" id="schedual_app" href="#">Schedual Appointment</a></li>
+        <li><a class="dropdown-item" id="approve_Appointment" href="#">Approval / Cancel Appointment</a></li>
+      
+      </ul>
+    </div>
+      </li>
+       <li class="nav-item dropdown">
+        <div class="dropdown">
+      <a class="nav-link  dropdown-toggle"  style="cursor:pointer;" herf="" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+        View
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+        <li><a class="dropdown-item" id="view_msg" href="#">View Messages</a></li>
+        <li><a class="dropdown-item" id="view_app" href="#">View All Appointment</a></li>
+      
+      </ul>
+    </div>
+      </li>
+
+    </ul>
+    <form class=" my-2 my-lg-0 ms-auto">
+     <ul class="navbar-nav mr-auto">
+        <li class="nav-item mx-1">
+       <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter">
+  Change password
+</button>
+        </li>
+        <li class="nav-item mx-1">
+          <a id="userlink" class="nav-link" href=""></a>
+        </li>
+        <li class="nav-item mx-1">
+          <a id="signoutlink" class="nav-link" href="login.html">Sign Out</a>
+          
+        </li>
+
+      </ul>
+    </form>
+  </div>
+</nav>
+     
+    <section class="content">
+      <div class="overview">
+                <div class="title">
+                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <span class="text dash_title "></span>
+                </div>               
+            </div>
+
+                <!-- CHANGE PASSSWORD MODAL -->
+
+
+              <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Control Panels</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+     
+
+                      <div class="modal-body">
+                            <label class="labs">Old Password</label>
+                            <input type="text" id="old_pass"><br>
+                            <label class="labs">New Password</label>
+                            <input type="text" id="new_pass"><br>
+                            <label class="labs">Confirm Password</label>
+                            
+                            <input type="text" id="con_pass"><br>
+                            
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" id="UpdModBtn" class="btn btn-success" onclick="save_password()">Update Password</button>
+                        
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                  <!--  SCHEDUAL STUDENT APPOINTMENT -->
+                <div class="schedual-wrapper" style="display: none;">
+     
+              <form action="" class="book_appointment" id="schedual_appointment">
+              
+                <h2>Schedual An Appointment</h2>
+                <hr />
+                <div class="container">
+                  <label><b>Select Student</b></label>
+                   <select id="student_name" class="h-25 teacher_select">
+                     <option>Select Your Student</option>
+                   </select><br/>
+                   
+                  <b>Schedual An Appointment</b>
+                  <input type="datetime-local" class="appoint w-30 mx-3" id="appointment" placeholder="" name="appointment" required><br/>
+                  <b>Message :</b>
+<textarea cols="60" rows="5" id="message" class="message" placeholder="Message" required></textarea>
+                  
+                  <button type="submit" class="appoint_btn">Submit</button>
+                </div>
+              </form>
+            </div>
+  <div class="update_container table-responsive w-75" style="display:none">
+                    <table class="table table-striped table-bordered ">
+                        <thead>
+                            <th scope="col">NO</th>                            
+                            <th scope="col">Appointment Time</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Username</th>
+
+                            <th scope="control">Control Center</th>
+                        </thead>
+                        <tbody id="tbody1">
+                              
+                        </tbody>
+                    </table>
+  </div>
+  <div class="view_all_msgs table-responsive w-75" style="display:none">
+                    <table class="table table-striped table-bordered ">
+                        <thead>
+                            <th scope="col">NO</th>                            
+                            <th scope="col">Student Name</th>
+                            <th scope="col">Message</th>
+                        </thead>
+                        <tbody id="tbody2">
+                              
+                        </tbody>
+                    </table>
+  </div>
+  <div class="view_appoitment table-responsive w-75" style="display:none">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <th scope="col">NO</th>                            
+                            <th scope="col">Appointment Time</th>                            
+                            <th scope="col">Student Name</th>
+                        </thead>
+                        <tbody id="tbody3">
+                              
+                        </tbody>
+                    </table>
+  </div>
+</section>
+  <script src=
+"https://www.gstatic.com/firebasejs/3.7.4/firebase.js">
+  </script>
+
+  <script src=
+"https://www.gstatic.com/firebasejs/3.7.4/firebase-app.js">
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase-auth.js"> </script>
+  <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase-database.js"> </script>
+
+  <script  src="teacher_page.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

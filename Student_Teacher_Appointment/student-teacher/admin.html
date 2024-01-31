@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Admin</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="./resources/Logo.png" alt="logo">
+        <nav>
+            <ul class="nav_bar">
+                <li><u><a href="./index.html">Home</a></u></li>
+                <li><u><a href="/admin.html" id="adminlink">Admin</a></u></li>
+                <li><u><a href="/teacher.html">Teacher</a></u></li>
+                <li><u><a href="/student.html">Student</a></u></li>
+            </ul>
+    </header>
+    <div class="admin-body">
+        
+        <div>
+            <h1 id="form-head"><u> Add Teacher </u></h1>
+            <form class="add-teacher">
+                <label for="Name">Name</label><input type="text" autocomplete="off" id="name">
+                <label for="Department">Department</label><input type="text" autocomplete="off" id="department">
+                <label for="Subject">Subject</label><input type="text" autocomplete="off" id="subject">
+                <label for="e-mail">E-Mail</label><input type="email" autocomplete="off" id="email" >
+                <input type="submit" value="Submit" id="submitBtn">
+            </form>
+        </div>
+        <div id="update-teacher" ><button> <b> Update/Delete Teacher </b></button></div>
+        <div id="approve" ><button><b>Approve Student Registration </b></button></div>
+        
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+.appointment-wrapper,.schedual-wrapper {
+    width: 100vw;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .register_form ,.appointment_form{
+  
+   
+    padding: 45px 31px 40px;
+    border-radius: 10px;
+    color: #fff;
+/*    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);*/
+  }
+
+.logout
+{
+    position: absolute;
+    top: 5px;
+    right: 30px;
+}
+
+.stud_submitbtn
+{
+  display: block;
+    border: none;
+    outline: none;
+    background: #030f11;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    color:white;
+}
+
+.teacher_nav
+{
+  background-color:rgb(62 16 73);
+}
+#tname ,.tlink{
+  color: white !important;
+  font-size: 16px !important;
+}
+.tulink li{
+  padding-top:10px !important;
+}
+.content{
+    margin: auto;
+    
+    background-color: var(--panel-color);
+    min-height: 100vh;
+    padding: 10px 14px;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    margin: 40px 0 30px 0;
+}
+.title i{
+    position: relative;
+    height: 35px;
+    width: 35px;
+    background-color: var(--primary-color);
+    border-radius: 6px;
+    color: var(--title-icon-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+.title .text{
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-left: 10px;
+}
+#signoutlink{
+  color:white;
+}
+#userlink{
+  color:black;
+}
+
+.labs{
+    display: inline-block;
+    width: 100px;
+}
+.table-responsive
+{
+  max-height:300px;
+}
+/*    BOOK APPOINTMENT    */
+.book_appointment{
+    position: relative;
+    width: 50%;
+    padding: 45px 31px 40px;
+    background: rgb(204 159 214);
+    border-radius: 10px;
+    color: #000;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  }
+  .appoint_btn
+{
+  display: block;
+    border: none;
+    outline: none;
+    background: #030f11;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    color:white;
+    margin-top: 10px;
+}
+#student_name{
+  
+      margin-left: 105px;
+    margin-bottom: 10px;
+}
+.dash_title{
+  margin:auto !important;
+  width: 50%;
+}
+#message{
+  margin-top: 10px;
+}
+.update_container,.view_all_msgs,.view_appoitment
+{
+  margin:   auto;
+}
